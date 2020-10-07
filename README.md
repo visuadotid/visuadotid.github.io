@@ -1,8 +1,8 @@
-# DataToVis
+# Visua.id
 
-From Data to Visualizations and Insights
+Data data menjadi visualisasi dan insight
 
 ## Getting started
-DataToVis makes data analytics amazingly simple for everyone.
+Visua.id membuat data analisis mudah bagi semua orang.
 
-Contact: datatovis@gmail.com
+Contact: visuadotid@gmail.com
