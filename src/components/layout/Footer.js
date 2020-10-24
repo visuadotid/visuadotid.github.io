@@ -30,7 +30,7 @@ const footerMenus = [
 ];
 
 const Footer = () => (
-  <footer className="w-full mt-48 bg-primary-darker">
+  <footer className="w-full mt-10 sm:mt-16 bg-primary-darker">
     <div className="flex flex-col items-center justify-center py-8">
       <picture className="mb-4">
         <img src={LogoVisuaDark} alt="logo-visua" />
