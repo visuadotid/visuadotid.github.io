@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import LogoIcon from '../../svg/LogoIcon';
+import LogoVisua from '../../svg/LogoVisua.svg';
 import Button from '../Button';
+import menus from '../../data/header-menu';
 
 const Headerx = () => (
   <header className="sticky top-0 bg-white shadow">
     <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
-      <div className="flex items-center text-2xl">
-        <div className="w-12 mr-3">
-          <LogoIcon />
-        </div>
-        Lander
+      <div className="h-16 mr-3">
+        <img src={LogoVisua} alt="logo-visua" />
       </div>
       <div className="flex mt-4 sm:mt-0">
         <AnchorLink className="px-4" href="#features">
@@ -33,8 +31,6 @@ const Headerx = () => (
   </header>
 );
 
-const menus = [{ url: '#about', key: 'about', label: 'About' }];
-
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
 
@@ -49,11 +45,11 @@ const Header = () => {
   return (
     <header
       data-testid="app-header"
-      className="sticky top-0 w-screen h-16 bg-gray-900 shadow-2xl z-10 md:bg-gray-900">
-      <div className="px-4 container mx-auto h-full flex flex-row justify-between items-center text-white sm:justify-start">
+      className="sticky top-0 w-screen h-16 bg-white shadow-xs z-10 md:bg-white">
+      <div className="px-4 container mx-auto h-full flex flex-row justify-between items-center text-white sm:justify-between">
         <a href="/">
-          <div className="w-12 mr-3">
-            <LogoIcon />
+          <div className="flex h-16 mr-3 items-center justify-center">
+            <img src={LogoVisua} alt="logo-visua" />
           </div>
         </a>
         <div className={`${isOpen && 'hidden'} -mr-2 flex items-center sm:hidden`}>
@@ -74,11 +70,13 @@ const Header = () => {
             </svg>
           </button>
         </div>
-        <nav data-testid="navigation" className="ml-8 hidden sm:block sm:ml-10 sm:pr-4">
+        <nav data-testid="navigation" className="hidden sm:block">
           <ul className="flex flex-row">
             {menus.map((menu) => (
-              <li className="ml-5" key={menu.key}>
-                <a href={menu.url}>{menu.label}</a>
+              <li className="ml-2 sm:ml-4 md:ml-6 lg:ml-8" key={menu.key}>
+                <a className="text-gray-900 text-base hover:text-primary-lighter" href={menu.url}>
+                  {menu.title}
+                </a>
               </li>
             ))}
           </ul>
@@ -93,16 +91,16 @@ const Header = () => {
         className={`${
           !isOpen && 'hidden'
         } absolute top-0 inset-x-0 p-2 transition transform origin-top-right sm:hidden`}>
-        <div className="rounded-lg shadow-md ">
+        <div className="rounded-lg shadow-xs ">
           <div
-            className="rounded-md bg-black shadow-xs overflow-hidden"
+            className="rounded-md bg-white shadow overflow-hidden"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="main-menu">
             <div className="px-2 pt-2 flex items-center justify-between">
               <a href="/">
-                <div className="w-12 mr-3">
-                  <LogoIcon />
+                <div className="flex h-16 mr-3 items-center justify-center">
+                  <img src={LogoVisua} alt="logo-visua" />
                 </div>
               </a>
               <div className="-mr-2">
@@ -122,17 +120,18 @@ const Header = () => {
                 </button>
               </div>
             </div>
-            <div className="px-2 pt-2 pb-3">
-              {menus.map((menu) => (
-                <a
-                  onClickCapture={onCloseMenu}
-                  key={menu.key}
-                  href={menu.url}
-                  className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-400 transition duration-150 ease-in-out"
-                  role="menuitem">
-                  {menu.label}
-                </a>
-              ))}
+            <div className="pt-2 pb-3">
+              <ul>
+                {menus.map((menu) => (
+                  <li className="md:ml-6 lg:ml-8" key={menu.key}>
+                    <a
+                      className="mt-1 block p-2 text-base font-medium text-gray-900 hover:text-white hover:bg-primary-darker focus:outline-none  transition duration-150 ease-in-out"
+                      href={menu.url}>
+                      {menu.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

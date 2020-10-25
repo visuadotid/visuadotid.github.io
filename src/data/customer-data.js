@@ -1,26 +1,23 @@
 export default [
   {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
-    content:
-      'Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Sit amet consectetur adipiscing elit duis.',
-    customerName: 'Jane Doe',
-    customerTitle: 'Director of Research and Data',
-    customerImage: 'https://placeimg.com/150/150/people'
+    title: 'Mantab Jiwa',
+    content: 'Semua jadi mudah dengan hanya sekali klik.',
+    customerName: 'Bambang Widodo',
+    customerTitle: 'CEO of Ruanghati',
+    customerImage: 'https://placeimg.com/150/150/people',
   },
   {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
-    content:
-      'Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Sit amet consectetur adipiscing elit duis.',
-    customerName: 'John Doe',
-    customerTitle: 'Director of Research and Data',
-    customerImage: 'https://placeimg.com/150/150/people'
+    title: 'Cetar membahana',
+    content: 'Mengatasi masalah tanpa masalah',
+    customerName: 'dr. Cinta',
+    customerTitle: 'Director of Research RS Sakinah',
+    customerImage: 'https://placeimg.com/150/150/people',
   },
   {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
-    content:
-      'Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Sit amet consectetur adipiscing elit duis.',
-    customerName: 'Jane Smith',
-    customerTitle: 'Director of Research and Data',
-    customerImage: 'https://placeimg.com/150/150/people'
-  }
+    title: 'Pokok-e aku padamu',
+    content: 'Mengolah data semakin lebih mudah dengan harga yang sangat terjangkau',
+    customerName: 'Joko Susilo',
+    customerTitle: 'CEO of PT Lantjar Djaja',
+    customerImage: 'https://placeimg.com/150/150/people',
+  },
 ];

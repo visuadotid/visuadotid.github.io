@@ -1,33 +1,6 @@
 import React from 'react';
 import LogoVisuaDark from '../../svg/LogoVisuaDark.svg';
-
-const footerMenus = [
-  {
-    title: 'Produk',
-    url: '#product',
-    key: 'product',
-  },
-  {
-    title: 'Cara Kerja',
-    url: '#how-to',
-    key: 'how-to',
-  },
-  {
-    title: 'Pengguna',
-    url: '#customers',
-    key: 'customers',
-  },
-  {
-    title: 'Tentang Kami',
-    url: '#about',
-    key: 'about',
-  },
-  {
-    title: 'Kontak',
-    url: '#contact',
-    key: 'contact',
-  },
-];
+import footerMenus from '../../data/header-menu';
 
 const Footer = () => (
   <footer className="w-full bg-primary-darker">
