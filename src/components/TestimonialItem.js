@@ -1,5 +1,4 @@
 import React from 'react';
-import Card from './Card';
 
 const TestimonialItem = ({ customer }) => (
   <div className="mb-5 bg-white p-5">
