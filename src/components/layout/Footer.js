@@ -27,12 +27,12 @@ const Footer = () => (
           <span className="mb-2 sm:mb-0">Copyright © Visua.id 2020. All rights reserved</span>
           <ul className="flex flex-row">
             <li className="mx-2">
-              <a className="text-white text-xs underline" href="">
+              <a className="text-white text-xs underline" href="/">
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a className="text-white text-xs underline" href="">
+              <a className="text-white text-xs underline" href="/">
                 Terms &amp; Conditions
               </a>
             </li>

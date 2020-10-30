@@ -6,16 +6,16 @@ const sizes = {
   xl: `py-5 px-16 text-lg`,
 };
 
-const Button = ({ children, className = '', size }) => {
+const Button = ({ children, className = '', size, textColor = 'text-white' }) => {
   return (
     <button
       type="button"
       className={`
+        ${textColor}
         ${sizes[size] || sizes.default}
-        ${className}
         rounded-xl
         rounded-bl-none
-        text-white
+        ${className}
     `}>
       {children}
     </button>

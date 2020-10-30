@@ -1,18 +1,18 @@
 const Menus = [
   {
-    title: 'Produk',
-    url: '#product',
-    key: 'product',
+    title: 'Fitur',
+    url: '#feature',
+    key: 'feature',
   },
   {
-    title: 'Cara Kerja',
+    title: 'Kegunaan',
+    url: '#functionality',
+    key: 'functionality',
+  },
+  {
+    title: 'Panduan',
     url: '#how-to',
     key: 'how-to',
-  },
-  {
-    title: 'Pengguna',
-    url: '#testimonials',
-    key: 'testimonials',
   },
   {
     title: 'Tentang Kami',

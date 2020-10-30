@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Button from '../src/components/Button';
 import TestimonialItem from '../src/components/TestimonialItem';
 import FeatureItem from '../src/components/FeatureItem';
@@ -6,51 +7,82 @@ import Layout from '../src/components/layout/Layout';
 import SectionSubtitle from '../src/components/SectionSubtitle';
 import SectionTitle from '../src/components/SectionTitle';
 import customerData from '../src/data/customer-data';
-import HeroImage from '../src/svg/HeroImage.svg';
+import HeroImage from '../src/svg/HeroImage2.png';
 import VisuaProcess from '../src/svg/VisuaProcess.svg';
 import Zap from '../src/svg/Zap.svg';
+import SupportedImages from '../src/svg/SupportedImages.svg';
 import Wrapper from '../src/components/layout/Wrapper';
+import StepItem from '../src/components/StepItem';
 
-const Index = ({ features, objectives }) => {
+const Index = ({ features, steps }) => {
   return (
     <Layout>
-      <section id="product" className="py-16 md:pt-40">
+      <Head>
+        <title>Visua - Dari data menjadi insight</title>
+        <meta
+          name="description"
+          content="Visua.id - Sinkronkan, simpan, and analisis semua data bisnis anda dalam satu tempat dan dapatkan insight dengan mudah dari data anda."
+        />
+      </Head>
+      <section
+        id="product"
+        className="pt-10 pb-48 md:pt-40 bg-primary"
+        style={{
+          backgroundImage: `url(${HeroImage})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: '100% 100%',
+        }}>
         <div className="container mx-auto px-2 flex flex-col md:flex-row">
-          <div className="w-full text-center md:text-left md:w-1/2">
+          <div className="w-full text-white text-center md:text-left md:w-1/2">
             <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold leading-none">
-              Jadikan presentasi datamu <span className="text-primary">menarik</span>
+              Kontrol Semua Data Bisnis Anda Dalam Satu Genggaman
             </h1>
             <p className="text-xl lg:text-2xl mt-6 font-light">
-              Visua adalah tool untuk memvisualisasikan data dari database apapun menjadi gambar
-              yang menarik dan mudah untuk dibaca.
+              Visua adalah tool yang powerful untuk mengintegrasikan, memonitor, dan membuat
+              visualisasi semua data bisnis Anda sehingga pengambilan keputusan secara data-driven
+              jauh lebih sederhana dan mudah.
             </p>
             <div className="mt-8 md:mt-12">
-              <Button size="md" className="bg-black">
-                Coba Visua Sekarang
+              <Button textColor="text-black" size="md" className="bg-secondary">
+                Coba Visua Sekarang - GRATIS
               </Button>
             </div>
           </div>
-          <div className="w-full mt-10 md:w-1/2 md:mt-0">
-            <picture>
-              <img src={HeroImage} alt="hero" />
-            </picture>
+        </div>
+      </section>
+      <section id="supported">
+        <div className="container mx-auto text-center p-4 sm:p-10">
+          <div className="flex flex-col items-center">
+            <h1>
+              Terintegrasi ke puluhan sumber data populer, mulai dari excel, Google ads, social
+              media hingga e-commerce
+            </h1>
+            <div>
+              <figure
+                className="w-full sm:w-4/4 sm:mx-auto mt-5 mb-2"
+                style={{ filter: `grayscale(1)` }}>
+                <img src={SupportedImages} alt="supported-data" />
+              </figure>
+            </div>
+            <p>dan masih banyak lagi</p>
           </div>
         </div>
       </section>
-      <section id="features" className="py-10 sm:py-20 lg:pb-20 lg:pt-24 bg-white">
+      <section id="feature" className="py-10 sm:py-20 lg:pb-20 lg:pt-24 bg-white">
         <div className="container mx-auto text-center px-2 sm:text-left">
-          <SectionTitle>Integrated System</SectionTitle>
+          <SectionTitle>Mengapa Visua?</SectionTitle>
           <SectionSubtitle>
-            Sistem terintegrasi untuk menampilkan apapun datamu secara mudah dan powerful
+            Kami membantu anda mengambil keputusan bisnis secara data-driven (berdasarkan data dan
+            analisa) dengan mudah dan sederhana
           </SectionSubtitle>
-          <div className="flex flex-col sm:flex-row sm:flex-wrap mt-12">
-            {features.map((feature) => (
-              <FeatureItem {...feature} />
+          <div className="flex flex-col sm:flex-row sm:flex-wrap mt-8">
+            {features.map((feature, index) => (
+              <FeatureItem key={`feature-${index}`} {...feature} />
             ))}
           </div>
         </div>
       </section>
-      <div id="how-to" />
+      <div id="functionality" className="h-16 w-full" />
       <div className="visua-process relative flex flex-col items-center bg-white">
         <div style={{ height: '50%', width: '100%', backgroundColor: 'white' }} />
         <img
@@ -65,6 +97,10 @@ const Index = ({ features, objectives }) => {
         .visua-process {
           height: 0px;
         }
+        #product {
+          background-size: 100%;
+        }
+
         @media (min-width: 360px) {
           .visua-process {
             height: 210px;
@@ -78,6 +114,9 @@ const Index = ({ features, objectives }) => {
         @media (min-width: 480px) {
           .visua-process {
             height: 270px;
+          }
+          #product {
+            background-size: 85%;
           }
         }
         @media (min-width: 560px) {
@@ -95,9 +134,14 @@ const Index = ({ features, objectives }) => {
             height: 400px;
           }
         }
+        @media (min-width: 1025px) {
+          #product {
+            background-size: 65%;
+          }
+        }
       `}</style>
 
-      <section id="what-to-sell" className="pb-20 lg:pb-24 bg-primary-darker">
+      <section id="#desc" className="pb-20 lg:pb-24 bg-primary-darker">
         <Wrapper className="text-center">
           <h1 className="font-semibold text-3xl text-white leading-tight mb-3">
             Satu tool untuk integrasi semua data source sekaligus menampilkannya
@@ -112,15 +156,16 @@ const Index = ({ features, objectives }) => {
         </Wrapper>
       </section>
 
-      <section id="objectives" className="py-20 lg:pt-20 lg:pb-16">
+      <section id="how-to" className="py-20 lg:pt-20 lg:pb-16">
         <div className="container mx-auto text-center sm:text-left">
-          <SectionTitle>User-Preferred Design</SectionTitle>
+          <SectionTitle>Panduan</SectionTitle>
           <SectionSubtitle>
-            Kami membantu anda menemukan kekuatan tersembunyi dalam data anda
+            Cukup dengan 3 langkah sederhana, anda dapat mengawasi semua perkembangan bisnis anda
+            dalam satu platform
           </SectionSubtitle>
           <div className="flex flex-col sm:flex-row sm:flex-wrap mt-12">
-            {objectives.map((objective) => (
-              <FeatureItem {...objective} />
+            {steps.map((objective, index) => (
+              <StepItem key={`step-${index + 1}`} {...objective} />
             ))}
           </div>
         </div>
@@ -129,7 +174,7 @@ const Index = ({ features, objectives }) => {
       <section id="testimonials" className="pt-10 pb-10 lg:pt-20 lg:pb-16">
         <div className="container mx-auto text-center">
           <SectionTitle>Testimonial</SectionTitle>
-          <SectionSubtitle>Pendapat dari customer</SectionSubtitle>
+          <SectionSubtitle>Bagaimana Visua membantu banyak bisnis berkembang</SectionSubtitle>
           <div className="flex flex-col md:flex-row mt-10">
             {customerData.map((customer) => (
               <div key={customer.customerName} className="flex-1 px-3">
@@ -144,12 +189,12 @@ const Index = ({ features, objectives }) => {
         <Wrapper className="px-5 sm:px-10">
           <div className="text-center">
             <h1 className="font-semibold text-3xl leading-10 mb-3">
-              Coba <span className="text-primary">Visua</span> sekarang dan lihat perubahan bisnis
-              anda
+              Coba Visua sekarang untuk kemudahan kontrol data bisnis dalam satu genggaman!
             </h1>
             <p className="text-gray-500 text-base mb-8">
-              Visua adalah tool untuk memvisualisasikan data dari ecommerce mu menjadi gambar yang
-              menarik dan mudah untuk dibaca
+              Visua adalah tool yang powerful untuk mengintegrasikan, memonitor dan
+              menvisualisasikan semua data bisnis anda, sehingga pengambilan keputusan secara
+              data-driven jauh lebih sederhana dan mudah.
             </p>
             <Button className="bg-primary" size="md">
               Coba Visua Sekarang
@@ -164,55 +209,49 @@ const Index = ({ features, objectives }) => {
 export async function getStaticProps() {
   const features = [
     {
-      title: 'SQL Query yang Ciamik',
+      title: 'Integrasi yang mudah dengan banyak sumber data populer',
       description:
-        'Visua adalah tool untuk memvisualisasikan data dari ecommerce mu menjadi gambar yang menarik dan mudah untuk dibaca',
-      image: Zap,
+        'Mulai dari excel, google ads, social media hingga e-commerce populer seperti shopee dan tokopedia, semua data bisnis anda dapat dimonitor dalam satu genggaman',
+      image: 'https://picsum.photos/400/200?1',
     },
     {
-      title: 'SQL Query yang Ciamik',
+      title: 'Mudah dalam penggunaan',
       description:
-        'Visua adalah tool untuk memvisualisasikan data dari ecommerce mu menjadi gambar yang menarik dan mudah untuk dibaca',
-      image: Zap,
+        'Tidak perlu menulis kueri yang rumit untuk menvisualisasikan data anda. Cukup sinkronkan semua data anda, anda dapat mengetahui apa yang sedang terjadi pada bisnis anda',
+      image: 'https://picsum.photos/400/200?2',
     },
     {
-      title: 'SQL Query yang Ciamik',
+      title: 'Pelaporan real-time sesuai perkembangan data bisnis dalam satu dashboard',
       description:
-        'Visua adalah tool untuk memvisualisasikan data dari ecommerce mu menjadi gambar yang menarik dan mudah untuk dibaca',
-      image: Zap,
-    },
-    {
-      title: 'SQL Query yang Ciamik',
-      description:
-        'Visua adalah tool untuk memvisualisasikan data dari ecommerce mu menjadi gambar yang menarik dan mudah untuk dibaca',
-      image: Zap,
+        'Semua data yang telah terintegrasi dengan Visua akan otomatis ter-update sesuai dengan perkembangan bisnis anda.',
+      image: 'https://picsum.photos/400/200?3',
     },
   ];
 
-  const objectives = [
+  const steps = [
     {
-      title: 'SQL Query yang Ciamik',
+      title: 'Pilih sumber data bisnis anda',
       description:
-        'Visua adalah tool untuk memvisualisasikan data dari ecommerce mu menjadi gambar yang menarik dan mudah untuk dibaca',
+        'Pilih sumber data apa saja yang ingin anda monitor, apakah berupa excel, social media, dashboard iklan hingga penjualan di e-commerce anda',
       image: Zap,
     },
     {
-      title: 'SQL Query yang Ciamik',
+      title: 'Sinkronkan semua pilihan sumber data anda dalam dashboard kami',
       description:
-        'Visua adalah tool untuk memvisualisasikan data dari ecommerce mu menjadi gambar yang menarik dan mudah untuk dibaca',
+        'Selanjutnya, anda dapat mensingkronkan sumber data anda ke Visua, apakah sales funnel anda di dalam excel, penjualan di e-commerce hingga biaya serta impact dari iklan anda tiap bulannya',
       image: Zap,
     },
     {
-      title: 'SQL Query yang Ciamik',
+      title: 'Visualisasikan untuk mengetahui insight yang diinginkan',
       description:
-        'Visua adalah tool untuk memvisualisasikan data dari ecommerce mu menjadi gambar yang menarik dan mudah untuk dibaca',
+        'Terakhir, tampilkan perkembangan data yang ingin anda monitor dalam bentuk visual yang menarik agar mudah dibaca insight-nya. ',
       image: Zap,
     },
   ];
   return {
     props: {
       features,
-      objectives,
+      steps,
     },
   };
 }
