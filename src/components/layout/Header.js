@@ -1,35 +1,34 @@
 import React, { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import LogoVisua from '../../svg/LogoVisua.svg';
-import Button from '../Button';
 import menus from '../../data/header-menu';
 
-const Headerx = () => (
-  <header className="sticky top-0 bg-white shadow">
-    <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
-      <div className="h-16 mr-3">
-        <img src={LogoVisua} alt="logo-visua" />
-      </div>
-      <div className="flex mt-4 sm:mt-0">
-        <AnchorLink className="px-4" href="#features">
-          Features
-        </AnchorLink>
-        <AnchorLink className="px-4" href="#services">
-          Services
-        </AnchorLink>
-        <AnchorLink className="px-4" href="#stats">
-          Stats
-        </AnchorLink>
-        <AnchorLink className="px-4" href="#testimonials">
-          Testimonials
-        </AnchorLink>
-      </div>
-      <div className="hidden md:block">
-        <Button className="text-sm">Start Free Trial</Button>
-      </div>
-    </div>
-  </header>
-);
+// const Headerx = () => (
+//   <header className="sticky top-0 bg-white shadow">
+//     <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
+//       <div className="h-16 mr-3">
+//         <img src={LogoVisua} alt="logo-visua" />
+//       </div>
+//       <div className="flex mt-4 sm:mt-0">
+//         <AnchorLink className="px-4" href="#features">
+//           Features
+//         </AnchorLink>
+//         <AnchorLink className="px-4" href="#services">
+//           Services
+//         </AnchorLink>
+//         <AnchorLink className="px-4" href="#stats">
+//           Stats
+//         </AnchorLink>
+//         <AnchorLink className="px-4" href="#testimonials">
+//           Testimonials
+//         </AnchorLink>
+//       </div>
+//       <div className="hidden md:block">
+//         <Button className="text-sm">Start Free Trial</Button>
+//       </div>
+//     </div>
+//   </header>
+// );
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -74,9 +73,12 @@ const Header = () => {
           <ul className="flex flex-row">
             {menus.map((menu) => (
               <li className="ml-2 sm:ml-4 md:ml-6 lg:ml-8" key={menu.key}>
-                <a className="text-gray-900 text-base hover:text-primary-lighter" href={menu.url}>
+                <AnchorLink
+                  onClickCapture={onCloseMenu}
+                  className="text-gray-900 text-base hover:text-primary-lighter"
+                  href={menu.url}>
                   {menu.title}
-                </a>
+                </AnchorLink>
               </li>
             ))}
           </ul>
@@ -124,11 +126,12 @@ const Header = () => {
               <ul>
                 {menus.map((menu) => (
                   <li className="md:ml-6 lg:ml-8" key={menu.key}>
-                    <a
+                    <AnchorLink
+                      onClickCapture={onCloseMenu}
                       className="mt-1 block p-2 text-base font-medium text-gray-900 hover:text-white hover:bg-primary-darker focus:outline-none  transition duration-150 ease-in-out"
                       href={menu.url}>
                       {menu.title}
-                    </a>
+                    </AnchorLink>
                   </li>
                 ))}
               </ul>

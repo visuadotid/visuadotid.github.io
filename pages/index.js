@@ -14,7 +14,7 @@ import Wrapper from '../src/components/layout/Wrapper';
 const Index = ({ features, objectives }) => {
   return (
     <Layout>
-      <section className="py-16 md:pt-40">
+      <section id="product" className="py-16 md:pt-40">
         <div className="container mx-auto px-2 flex flex-col md:flex-row">
           <div className="w-full text-center md:text-left md:w-1/2">
             <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold leading-none">
@@ -50,7 +50,7 @@ const Index = ({ features, objectives }) => {
           </div>
         </div>
       </section>
-
+      <div id="how-to" />
       <div className="visua-process relative flex flex-col items-center bg-white">
         <div style={{ height: '50%', width: '100%', backgroundColor: 'white' }} />
         <img
@@ -140,7 +140,7 @@ const Index = ({ features, objectives }) => {
         </div>
       </section>
 
-      <section id="invitation" className="py-16">
+      <section id="about" className="py-16">
         <Wrapper className="px-5 sm:px-10">
           <div className="text-center">
             <h1 className="font-semibold text-3xl leading-10 mb-3">

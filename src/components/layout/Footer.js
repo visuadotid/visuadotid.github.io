@@ -1,9 +1,10 @@
 import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import LogoVisuaDark from '../../svg/LogoVisuaDark.svg';
 import footerMenus from '../../data/header-menu';
 
 const Footer = () => (
-  <footer className="w-full bg-primary-darker">
+  <footer id="contact" className="w-full bg-primary-darker">
     <div className="flex flex-col items-center justify-center py-8">
       <picture className="mb-4">
         <img src={LogoVisuaDark} alt="logo-visua" />
@@ -12,9 +13,9 @@ const Footer = () => (
         <ul className="flex flex-row flex-wrap items-center justify-center leading-loose">
           {footerMenus.map((menu) => (
             <li className="mx-2" key={menu.key}>
-              <a className="text-white text-sm" href={menu.url}>
+              <AnchorLink className="text-white text-sm" href={menu.url}>
                 {menu.title}
-              </a>
+              </AnchorLink>
             </li>
           ))}
         </ul>

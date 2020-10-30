@@ -11,8 +11,8 @@ const Menus = [
   },
   {
     title: 'Pengguna',
-    url: '#customers',
-    key: 'customers',
+    url: '#testimonials',
+    key: 'testimonials',
   },
   {
     title: 'Tentang Kami',
