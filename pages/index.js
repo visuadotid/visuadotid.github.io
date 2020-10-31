@@ -18,11 +18,42 @@ const Index = ({ features, steps }) => {
   return (
     <Layout>
       <Head>
-        <title>Visua - Dari data menjadi insight</title>
+        <title>Visua.id | Dari Data Menjadi Insight</title>
         <meta
           name="description"
-          content="Visua.id - Sinkronkan, simpan, and analisis semua data bisnis anda dalam satu tempat dan dapatkan insight dengan mudah dari data anda."
+          content="Visua.id - Sinkronkan, simpan, dan analisis semua data bisnis Anda dalam satu tempat dan dapatkan insight dengan mudah dari data Anda."
         />
+
+        {/* <!-- Google / Search Engine Tags --> */}
+        <meta itemprop="name" content="Visua.id | Dari Data Menjadi Insight" />
+        <meta
+          itemprop="description"
+          content="Visua.id - Sinkronkan, simpan, dan analisis semua data bisnis Anda dalam satu tempat dan dapatkan insight dengan mudah dari data Anda."
+        />
+        <meta itemprop="image" content="https://visua.id/images/visua-process.png" />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="https://visua.id" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Visua.id | Dari Data Menjadi Insight" />
+        <meta
+          property="og:description"
+          content="Visua.id - Sinkronkan, simpan, dan analisis semua data bisnis Anda dalam satu tempat dan dapatkan insight dengan mudah dari data Anda."
+        />
+        <meta property="og:image" content="https://visua.id/images/visua-process.png" />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Visua.id | Dari Data Menjadi Insight" />
+        <meta
+          name="twitter:description"
+          content="Visua.id - Sinkronkan, simpan, dan analisis semua data bisnis Anda dalam satu tempat dan dapatkan insight dengan mudah dari data Anda."
+        />
+        <meta name="twitter:image" content="https://visua.id/images/visua-process.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       </Head>
       <section
         id="product"
