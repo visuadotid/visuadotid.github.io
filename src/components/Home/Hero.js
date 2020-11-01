@@ -1,5 +1,4 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
 import HeroImage from '../../../src/svg/HeroImage2.png';
 import Button from '../Button';
 
