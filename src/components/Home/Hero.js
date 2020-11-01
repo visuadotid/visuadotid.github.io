@@ -1,7 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-// import HeroImage from '../../../src/svg/HeroImage2.png';
-const HeroImage = dynamic(import('../../../src/svg/HeroImage2.png'));
+import HeroImage from '../../../src/svg/HeroImage2.png';
 import Button from '../Button';
 
 export default function Hero() {
@@ -10,7 +9,7 @@ export default function Hero() {
       id="product"
       className="pt-10 pb-48 md:pt-40 bg-primary"
       style={{
-        // backgroundImage: `url(${HeroImage})`,
+        backgroundImage: `url(${HeroImage})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '100% 100%',
       }}>
