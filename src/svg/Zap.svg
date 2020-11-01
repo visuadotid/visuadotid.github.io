@@ -1,0 +1,12 @@
+<svg width="70" height="71" viewBox="0 0 70 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect opacity="0.1" y="0.173462" width="70" height="70" rx="10" fill="#405DF6" />
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M36 25.1735L26 37.1735H35L34 45.1735L44 33.1735H35L36 25.1735V25.1735Z"
+    stroke="#405DF6"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
