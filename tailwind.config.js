@@ -1,4 +1,5 @@
 module.exports = {
+  purge: false,
   theme: {
     extend: {
       colors: {
@@ -10,6 +11,9 @@ module.exports = {
         secondary: {
           default: '#83FFE6',
         },
+      },
+      fontFamily: {
+        sans: ['Inter'],
       },
     },
   },
