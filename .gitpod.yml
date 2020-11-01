@@ -1,0 +1,3 @@
+tasks:
+  - init: cp -v package-sample.json package.json && npm install
+    command: npm watch
