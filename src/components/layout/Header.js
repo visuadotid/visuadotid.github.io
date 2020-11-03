@@ -1,34 +1,8 @@
 import React, { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import LogoVisua from '../../svg/LogoVisua.svg';
+import LogoVisua from '../../svg/LogoVisuaWhite.svg';
+import LogoVisuaDark from '../../svg/LogoVisua.svg';
 import menus from '../../data/header-menu';
-
-// const Headerx = () => (
-//   <header className="sticky top-0 bg-white shadow">
-//     <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
-//       <div className="h-16 mr-3">
-//         <img src={LogoVisua} alt="logo-visua" />
-//       </div>
-//       <div className="flex mt-4 sm:mt-0">
-//         <AnchorLink className="px-4" href="#features">
-//           Features
-//         </AnchorLink>
-//         <AnchorLink className="px-4" href="#services">
-//           Services
-//         </AnchorLink>
-//         <AnchorLink className="px-4" href="#stats">
-//           Stats
-//         </AnchorLink>
-//         <AnchorLink className="px-4" href="#testimonials">
-//           Testimonials
-//         </AnchorLink>
-//       </div>
-//       <div className="hidden md:block">
-//         <Button className="text-sm">Start Free Trial</Button>
-//       </div>
-//     </div>
-//   </header>
-// );
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -44,7 +18,7 @@ const Header = () => {
   return (
     <header
       data-testid="app-header"
-      className="sticky top-0 w-screen h-16 bg-white shadow-xs z-10 md:bg-white">
+      className="sticky top-0 w-screen h-16 bg-primary shadow-xs z-10">
       <div className="px-4 container mx-auto h-full flex flex-row justify-between items-center text-white sm:justify-between">
         <a href="/">
           <div className="flex h-16 mr-3 items-center justify-center">
@@ -75,7 +49,7 @@ const Header = () => {
               <li className="ml-2 sm:ml-4 md:ml-6 lg:ml-8" key={menu.key}>
                 <AnchorLink
                   onClickCapture={onCloseMenu}
-                  className="text-gray-900 text-base hover:text-primary-lighter"
+                  className="text-white text-base hover:text-opacity-75 hover:text-white"
                   href={menu.url}>
                   {menu.title}
                 </AnchorLink>
@@ -99,10 +73,10 @@ const Header = () => {
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="main-menu">
-            <div className="px-2 pt-2 flex items-center justify-between">
+            <div className="px-2 flex items-center justify-between">
               <a href="/">
                 <div className="flex h-16 mr-3 items-center justify-center">
-                  <img src={LogoVisua} alt="logo-visua" />
+                  <img src={LogoVisuaDark} alt="logo-visua" />
                 </div>
               </a>
               <div className="-mr-2">
@@ -128,7 +102,7 @@ const Header = () => {
                   <li className="md:ml-6 lg:ml-8" key={menu.key}>
                     <AnchorLink
                       onClickCapture={onCloseMenu}
-                      className="mt-1 block p-2 text-base font-medium text-gray-900 hover:text-white hover:bg-primary-darker focus:outline-none  transition duration-150 ease-in-out"
+                      className="mt-1 block p-2 text-base font-medium bg-white text-gray-900 hover:text-opacity-75 hover:text-gray-900 focus:outline-none transition duration-150 ease-in-out"
                       href={menu.url}>
                       {menu.title}
                     </AnchorLink>

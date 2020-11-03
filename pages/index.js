@@ -8,12 +8,12 @@ import RealtimeReport from '../src/svg/RealtimeReport.png';
 import Group11 from '../src/svg/Group11.svg';
 import Group12 from '../src/svg/Group12.svg';
 import Group14 from '../src/svg/Group14.svg';
-import SupportedImages from '../src/svg/SupportedImages.svg';
 import Wrapper from '../src/components/layout/Wrapper';
 import Hero from '../src/components/Home/Hero';
 import Features from '../src/components/Home/Features';
 import Functionality from '../src/components/Home/Functionality';
 import Guides from '../src/components/Home/Guides';
+import links from '../src/data/links';
 
 const Index = ({ features, steps }) => {
   return (
@@ -61,7 +61,7 @@ const Index = ({ features, steps }) => {
         />
       </Head>
       <Hero />
-      <section id="supported">
+      {/* <section id="supported">
         <div className="container mx-auto text-center p-4 sm:p-10">
           <div className="flex flex-col items-center">
             <h1>
@@ -78,14 +78,14 @@ const Index = ({ features, steps }) => {
             <p>dan masih banyak lagi</p>
           </div>
         </div>
-      </section>
+      </section> */}
       <Features features={features} />
       <Functionality />
       <Guides steps={steps} />
       <section id="about" className="py-16">
         <Wrapper className="px-5 sm:px-10">
           <div className="text-center">
-            <h1 className="font-semibold text-3xl leading-10 mb-3">
+            <h1 className="font-semibold text-2xl leading-10 mb-3">
               Coba Visua sekarang untuk kemudahan kontrol data bisnis dalam satu genggaman!
             </h1>
             <p className="text-gray-500 text-base mb-8">
@@ -93,7 +93,10 @@ const Index = ({ features, steps }) => {
               menvisualisasikan semua data bisnis anda, sehingga pengambilan keputusan secara
               data-driven jauh lebih sederhana dan mudah.
             </p>
-            <Button className="bg-primary" size="md">
+            <Button
+              className="bg-primary hover:bg-primary-lighter"
+              size="md"
+              href={links.questionaireLink}>
               Coba Visua Sekarang
             </Button>
           </div>

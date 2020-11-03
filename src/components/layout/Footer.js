@@ -13,7 +13,9 @@ const Footer = () => (
         <ul className="flex flex-row flex-wrap items-center justify-center leading-loose">
           {footerMenus.map((menu) => (
             <li className="mx-2" key={menu.key}>
-              <AnchorLink className="text-white text-sm" href={menu.url}>
+              <AnchorLink
+                className="text-white text-sm hover:text-white hover:underline"
+                href={menu.url}>
                 {menu.title}
               </AnchorLink>
             </li>
