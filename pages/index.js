@@ -61,7 +61,7 @@ const Index = ({ features, steps }) => {
         />
       </Head>
       <Hero />
-      <section id="supported">
+      {/* <section id="supported">
         <div className="container mx-auto text-center p-4 sm:p-10">
           <div className="flex flex-col items-center">
             <h1>
@@ -78,7 +78,7 @@ const Index = ({ features, steps }) => {
             <p>dan masih banyak lagi</p>
           </div>
         </div>
-      </section>
+      </section> */}
       <Features features={features} />
       <Functionality />
       <Guides steps={steps} />

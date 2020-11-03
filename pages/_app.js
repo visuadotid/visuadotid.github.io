@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { GTMPageView } from '../lib/gtm';
 import '../src/css/tailwind.css';
 

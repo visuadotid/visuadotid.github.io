@@ -1,13 +1,8 @@
 const Menus = [
   {
-    title: 'Fitur',
-    url: '#feature',
-    key: 'feature',
-  },
-  {
-    title: 'Kegunaan',
-    url: '#functionality',
-    key: 'functionality',
+    title: 'Mengapa Visua',
+    url: '#why',
+    key: 'why',
   },
   {
     title: 'Panduan',
@@ -15,12 +10,7 @@ const Menus = [
     key: 'how-to',
   },
   {
-    title: 'Tentang Kami',
-    url: '#about',
-    key: 'about',
-  },
-  {
-    title: 'Kontak',
+    title: 'Kontak Kami',
     url: '#contact',
     key: 'contact',
   },

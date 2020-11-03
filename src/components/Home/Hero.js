@@ -15,10 +15,10 @@ export default function Hero() {
       }}>
       <div className="container mx-auto px-2 flex flex-col md:flex-row">
         <div className="w-full text-white text-center md:text-left md:w-1/2">
-          <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold leading-none">
+          <h1 className="text-3xl sm:text-5xl xl:text-6xl font-bold leading-none">
             Kontrol Semua Data Bisnis Anda Dalam Satu Genggaman
           </h1>
-          <p className="text-xl lg:text-2xl mt-6 font-light">
+          <p className="text-base lg:text-2xl mt-6 font-light">
             Visua adalah tool yang powerful untuk mengintegrasikan, memonitor, dan membuat
             visualisasi semua data bisnis Anda sehingga pengambilan keputusan secara data-driven
             jauh lebih sederhana dan mudah.

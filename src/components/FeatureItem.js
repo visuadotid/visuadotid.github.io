@@ -9,7 +9,7 @@ export default function FeatureItem({ title, description, image, even }) {
             <img className="w-full rounded-md object-cover" src={image} alt={title} />
           </picture>
         </div>
-        <div className="w-full md:w-1/2 lg:w-2/5 pt-2 text-center sm:text-left p-5">
+        <div className="w-full md:w-1/2 lg:w-2/5 text-center sm:text-left p-5">
           <h3 className="text-xl text-gray-900 mb-2">{title}</h3>
           <p className="text-base text-gray-500 leading-relaxed">{description}</p>
         </div>

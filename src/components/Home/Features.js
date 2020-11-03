@@ -6,7 +6,7 @@ import SectionTitle from '../SectionTitle';
 
 export default function Features({ features }) {
   return (
-    <section id="feature" className="py-10 sm:py-20 lg:pb-20 lg:pt-24 bg-white">
+    <section id="why" className="py-10 sm:py-20 lg:pb-20 lg:pt-24 bg-white">
       <div className="container mx-auto text-center px-2">
         <Wrapper>
           <SectionTitle>Mengapa Visua?</SectionTitle>
