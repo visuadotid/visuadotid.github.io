@@ -3,6 +3,8 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import LogoVisua from '../../svg/LogoVisuaWhite.svg';
 import LogoVisuaDark from '../../svg/LogoVisua.svg';
 import menus from '../../data/header-menu';
+import links from '../../data/links';
+import Button from '../Button';
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -55,6 +57,11 @@ const Header = () => {
                 </AnchorLink>
               </li>
             ))}
+            <li className="ml-2 sm:ml-4 md:ml-6 lg:ml-8" key="button-try-visua">
+              <Button className="border hover:bg-primary-lighter" href={links.questionaireLink}>
+                Coba Visua
+              </Button>
+            </li>
           </ul>
         </nav>
       </div>
