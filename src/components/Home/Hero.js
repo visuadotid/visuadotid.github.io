@@ -1,7 +1,7 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
 import HeroImage from '../../../src/svg/HeroImage2.png';
 import Button from '../Button';
+import links from '../../data/links';
 
 export default function Hero() {
   return (
@@ -24,7 +24,11 @@ export default function Hero() {
             jauh lebih sederhana dan mudah.
           </p>
           <div className="mt-8 md:mt-12">
-            <Button textColor="text-black" size="md" className="bg-secondary">
+            <Button
+              href={links.questionaireLink}
+              textColor="text-black"
+              size="md"
+              className="bg-secondary hover:bg-secondary-lighter">
               Coba Visua Sekarang - GRATIS
             </Button>
           </div>

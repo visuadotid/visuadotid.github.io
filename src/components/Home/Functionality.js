@@ -2,6 +2,7 @@ import React from 'react';
 import VisuaProcess from '../../../src/svg/VisuaProcess.svg';
 import Button from '../Button';
 import Wrapper from '../layout/Wrapper';
+import links from '../../data/links';
 
 export default function Functionality() {
   return (
@@ -26,7 +27,10 @@ export default function Functionality() {
             Visua adalah tool untuk memvisualisasikan data dari semua sumber menjadi gambar yang
             menarik dan mudah untuk dibaca
           </p>
-          <Button className="bg-primary" size="md">
+          <Button
+            className="bg-primary hover:bg-primary-lighter"
+            size="md"
+            href={links.questionaireLink}>
             Coba Visua Sekarang
           </Button>
         </Wrapper>

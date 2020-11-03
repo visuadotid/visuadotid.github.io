@@ -6,19 +6,22 @@ const sizes = {
   xl: `py-5 px-16 text-lg`,
 };
 
-const Button = ({ children, className = '', size, textColor = 'text-white' }) => {
+const Button = ({ children, className = '', size, textColor = 'text-white', href }) => {
   return (
-    <button
-      type="button"
+    <a
+      target="_blank"
+      href={href}
       className={`
         ${textColor}
+        hover:${textColor}
         ${sizes[size] || sizes.default}
         rounded-xl
         rounded-bl-none
+        cursor-pointer
         ${className}
     `}>
       {children}
-    </button>
+    </a>
   );
 };
 
