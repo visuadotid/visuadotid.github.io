@@ -20,7 +20,7 @@ export default function Functionality() {
       </div>
       <section id="#desc" className="pb-20 lg:pb-24 bg-primary-darker">
         <Wrapper className="text-center">
-          <h1 className="font-semibold text-3xl text-white leading-tight mb-3">
+          <h1 className="font-semibold text-2xl text-white leading-tight mb-3">
             Satu tool untuk integrasi semua data source sekaligus menampilkannya
           </h1>
           <p className="text-gray-500 text-base mb-8">

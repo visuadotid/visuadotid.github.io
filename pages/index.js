@@ -85,7 +85,7 @@ const Index = ({ features, steps }) => {
       <section id="about" className="py-16">
         <Wrapper className="px-5 sm:px-10">
           <div className="text-center">
-            <h1 className="font-semibold text-3xl leading-10 mb-3">
+            <h1 className="font-semibold text-2xl leading-10 mb-3">
               Coba Visua sekarang untuk kemudahan kontrol data bisnis dalam satu genggaman!
             </h1>
             <p className="text-gray-500 text-base mb-8">

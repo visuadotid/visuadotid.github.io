@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="product"
-      className="pt-10 pb-48 md:pt-40 bg-primary"
+      className="pt-10 pb-64 md:pt-40 bg-primary"
       style={{
         backgroundImage: `url(${HeroImage})`,
         backgroundRepeat: 'no-repeat',
