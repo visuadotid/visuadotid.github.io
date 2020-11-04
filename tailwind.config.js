@@ -9,7 +9,9 @@ module.exports = {
           darker: 'hsl(231, 88%, 19%)',
         },
         secondary: {
+          lighter: '#c6fff3',
           default: '#83FFE6',
+          darker: '#00715a',
         },
       },
       fontFamily: {
