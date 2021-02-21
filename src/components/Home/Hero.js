@@ -14,7 +14,7 @@ export default function Hero() {
         backgroundPosition: '100% 100%',
       }}>
       <div className="container mx-auto px-2 flex flex-col md:flex-row">
-        <div className="w-full text-white text-center md:text-left md:w-1/2">
+        <div className="w-full text-white px-4 text-center md:text-left md:w-1/2">
           <h1 className="text-3xl sm:text-5xl xl:text-6xl font-bold leading-none">
             Kontrol Semua Data Bisnis Anda Dalam Satu Genggaman
           </h1>
@@ -32,6 +32,12 @@ export default function Hero() {
               Coba Visua Sekarang - GRATIS
             </Button>
           </div>
+        </div>
+        <div className="flex flex-1 w-full items-center text-center content-center justify-center mt-20 md:mt-0 md:text-left md:w-1/2">
+          <iframe
+            className="w-5/6"
+            height="350px"
+            src="https://www.youtube.com/embed/MnT1mtSKW2I"></iframe>
         </div>
       </div>
     </section>

@@ -57,7 +57,7 @@ const Header = () => {
                 </AnchorLink>
               </li>
             ))}
-            <li className="ml-2 sm:ml-4 md:ml-6 lg:ml-8" key="button-try-visua">
+            <li className="hidden md:block ml-2 sm:ml-4 md:ml-6 lg:ml-8" key="button-try-visua">
               <Button className="border hover:bg-primary-lighter" href={links.questionaireLink}>
                 Coba Visua
               </Button>
